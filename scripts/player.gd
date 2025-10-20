@@ -19,6 +19,7 @@ func get_input() -> void:
 	
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction.normalized() * speed
+	#$"../Map".velocity = input_direction.normalized() * speed
 	
 	if (input_direction != Vector2.ZERO):
 		$AnimatedSprite2D.play('walk')
