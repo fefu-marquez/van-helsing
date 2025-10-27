@@ -42,11 +42,16 @@ sources/1 = SubResource("TileSetAtlasSource_h2yge")
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+z_index = 2
 position = Vector2(192, 108)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
+[node name="Timer" type="Timer" parent="Player"]
+wait_time = 1.5
+
 [node name="Map" type="TileMapLayer" parent="."]
+z_index = 1
 tile_map_data = PackedByteArray("AAD8//3/AQACAAEAAAADAPn/AQABAAAAAAARAAIAAQACAAAAAAAPAPr/AQACAAEAAAD//wYAAQADAAEAAAAPAAkAAQACAAEAAAD7//3/AQACAAAAAAASAPP/AQACAAAAAAAIAPT/AQACAAAAAAACAPP/AQADAAAAAAD+//P/AQACAAEAAAAaAAkAAQADAAEAAAAtAAMAAQADAAEAAAAtAPT/AQACAAEAAAAAABkAAQADAAAAAAAAABgAAQACAAEAAADz/xYAAQADAAEAAAAfABkAAQACAAEAAAAzABIAAQADAAAAAADy/+n/AQACAAAAAAAQAOj/AQADAAEAAAAkAPL/AQADAAAAAAAaAN//AQAAAAAAAAAUAN//AQAAAAAAAAAXANv/AQAAAAIAAAAUANj/AQAAAAAAAAAaANj/AQAAAAAAAAA=")
 tile_set = SubResource("TileSet_1bvp3")
 script = ExtResource("3_h2yge")
