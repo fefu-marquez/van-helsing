@@ -5,7 +5,7 @@ extends CharacterBody2D
 #  VARIABLES
 # ----------------------------
 @onready var timer: Timer = $Timer
-@export var speed: float = 40.0
+@export var speed: float = 60.0
 @export var atktime: float = 1.5
 
 #  PROCESSES

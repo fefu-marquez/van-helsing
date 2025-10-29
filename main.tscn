@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d3bfb0f6sg57h" path="res://scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://br008p1r841vp" path="res://assets/Dark NES Neon Black.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://b7y24n2bh06p3" path="res://scripts/map.gd" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://dyn4poxu1qtto" path="res://scenes/spawner.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_1bvp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 resource_name = "ArmatorX's NES Dark"

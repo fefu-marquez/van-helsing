@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed := 20.0
+@export var speed := 50.0
 
 func _process(delta: float) -> void:
 	move_towards_player($"../../Player".position)
