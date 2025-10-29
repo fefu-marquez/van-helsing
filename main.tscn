@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://b38ticvd6mg83"]
+[gd_scene load_steps=7 format=4 uid="uid://b38ticvd6mg83"]
 
 [ext_resource type="PackedScene" uid="uid://d3bfb0f6sg57h" path="res://scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://br008p1r841vp" path="res://assets/Dark NES Neon Black.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://b7y24n2bh06p3" path="res://scripts/map.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_1bvp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 resource_name = "ArmatorX's NES Dark"
@@ -42,11 +43,18 @@ sources/1 = SubResource("TileSetAtlasSource_h2yge")
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+z_index = 2
 position = Vector2(192, 108)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
+[node name="Timer" type="Timer" parent="Player"]
+wait_time = 1.5
+
 [node name="Map" type="TileMapLayer" parent="."]
+z_index = 1
 tile_map_data = PackedByteArray("AAD8//3/AQACAAEAAAADAPn/AQABAAAAAAARAAIAAQACAAAAAAAPAPr/AQACAAEAAAD//wYAAQADAAEAAAAPAAkAAQACAAEAAAD7//3/AQACAAAAAAASAPP/AQACAAAAAAAIAPT/AQACAAAAAAACAPP/AQADAAAAAAD+//P/AQACAAEAAAAaAAkAAQADAAEAAAAtAAMAAQADAAEAAAAtAPT/AQACAAEAAAAAABkAAQADAAAAAAAAABgAAQACAAEAAADz/xYAAQADAAEAAAAfABkAAQACAAEAAAAzABIAAQADAAAAAADy/+n/AQACAAAAAAAQAOj/AQADAAEAAAAkAPL/AQADAAAAAAAaAN//AQAAAAAAAAAUAN//AQAAAAAAAAAXANv/AQAAAAIAAAAUANj/AQAAAAAAAAAaANj/AQAAAAAAAAA=")
 tile_set = SubResource("TileSet_1bvp3")
 script = ExtResource("3_h2yge")
+
+[node name="Spawner" parent="." instance=ExtResource("4_1bvp3")]
